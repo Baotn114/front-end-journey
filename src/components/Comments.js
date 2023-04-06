@@ -63,20 +63,20 @@ const Comments = (data_id) => {
                       />
                       <div>
                           <MDBTypography tag="h6" className="fw-bold mb-1">
-                              {data.user.name}
+                              {userComments && data.user.name}
                           </MDBTypography>
                         <MDBCardText>
                           <small className='text-muted'> {data.user.email} </small>
                         </MDBCardText>
                         <p className="mb-0">
-                              {data.comment}
+                              {userComments && data.comment}
                         </p>
                       </div>
                     </div>
                   </MDBCardBody>
                   <hr className="my-0" />
                 </MDBCard>
-        ))}
+            ))}
               </MDBCol>
             </MDBRow>
           </MDBContainer>
