@@ -12,7 +12,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 const Posts = () => {
 
     // Khai bao useState() de lay cac blog
-    const [post, setPost] = useState(null);
+    const [post, setPost] = useState([]);
 
     // Khai bao get Blogs
     const getPost = async () =>{
