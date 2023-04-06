@@ -61,7 +61,7 @@ const Navigationbar = () => {
                                 </MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
-                                <MDBNavbarLink href="/posts">Posts</MDBNavbarLink>
+                                <MDBNavbarLink href="/post">Posts</MDBNavbarLink>
                             </MDBNavbarItem>
                             {!user && (
                                 <MDBNavbarItem>
