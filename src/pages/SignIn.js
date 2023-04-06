@@ -15,7 +15,7 @@ const SignIn = () => {
     const navigate = useNavigate();
 
     const signUp = () =>{
-      navigate("/signUp")
+      navigate("/sign-up")
     }
 
     // Khai bao useState cac nut
