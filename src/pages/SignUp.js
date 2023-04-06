@@ -33,7 +33,7 @@ const SignUp = () => {
                 password: password,
                 repassword: repassword
             })
-            navigate("/signin");
+            navigate("/sign-in");
         } catch (error) {
             //console.error(error.response.data);
             const data = error.response.data.error;
