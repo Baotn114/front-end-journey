@@ -69,7 +69,7 @@ const Comments = (data_id) => {
                           <small className='text-muted'> {data.user.email} </small>
                         </MDBCardText>
                         <p className="mb-0">
-                              {userComments && data.comment}
+                              { data.comment}
                         </p>
                       </div>
                     </div>

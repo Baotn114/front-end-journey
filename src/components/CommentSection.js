@@ -20,7 +20,7 @@ const CommentSection = (data_id) => {
         e.preventDefault();
         // Dung POST de gui comment vao Db
         try {
-            const response = await axios.post('/api/user/comment/' + id, {
+            const response = await axios.post('https://journey-diary-api.onrender.com/api/user/comment/' + id, {
                 comment: comment,
                 user: `${user._id}`,
                 post: id
@@ -32,8 +32,9 @@ const CommentSection = (data_id) => {
                 } 
             })
             const data = response.data;
-            //console.log(data);
-            dispatch({type: 'CREATE_COMMENTS', payload: data})
+            if(data){
+                dispatch({type: 'CREATE_COMMENTS', payload: data})
+            }
             setComment('');
         } catch (error) {
             const data = error.response.data.error;
