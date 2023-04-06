@@ -34,7 +34,7 @@ const Posts = () => {
             <div className="custom-post">
                 <div className="row" style={{marginTop: '30px'}}>
                     {post && post.map((data)=>(
-                        <div className="col-sm-3" style={{width: '300px', marginTop: '30px'}}>
+                        <div className="col-sm-3" style={{width: '300px', marginTop: '30px'}} key={data._id}>
                             <Link to={`/details/${data._id}`} key={data._id}>
                                 <MDBCard>
                                     <MDBCardImage src={data.image} alt='...' position='top' />
