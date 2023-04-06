@@ -6,6 +6,7 @@ import {
     MDBCardImage
 } from 'mdb-react-ui-kit';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 const Posts = () => {
