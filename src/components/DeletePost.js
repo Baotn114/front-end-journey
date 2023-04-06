@@ -27,7 +27,7 @@ const DeletePost = (_id) => {
     //Xu li function delete
     const handleClick = async () =>{
         try {
-            const response = await axios.delete('/api/user/postDelete/' + id, {
+            const response = await axios.delete('https://journey-diary-api.onrender.com/api/user/postDelete/' + id, {
                 headers: {
                     'Content-type' : 'application/json',
                     'Authorization': `Bearer ${user.token}`              
