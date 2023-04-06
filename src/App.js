@@ -18,12 +18,12 @@ function App() {
         <NavigationBar/>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route exact path="/post" element={<Posts />} />
-          <Route exact path="/sign-in" element={<SignIn />} />
-          <Route exact path="/sign-up" element={<SignUp />} />
-          <Route exact path="/details/:id" element={<PostDetails />} />
-          {user && <Route exact path="/user" element={<User />} />}
-          {user && <Route exact path="/creation" element={<PostCreate />} />}
+          <Route path="/post" element={<Posts />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/details/:id" element={<PostDetails />} />
+          {user && <Route path="/user" element={<User />} />}
+          {user && <Route path="/creation" element={<PostCreate />} />}
         </Routes>
         <Footer />
     </div>
