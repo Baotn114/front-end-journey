@@ -45,7 +45,7 @@ const PostCreate = () => {
                 } 
             })
             console.log(response.data);
-            navigate('/posts')
+            navigate('/post')
         } catch (error) {
             const data = error.response.data.error;
             const stringAlert = JSON.stringify(data);
