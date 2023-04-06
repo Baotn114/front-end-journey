@@ -35,7 +35,7 @@ const PostModifyDisplay = (_id) => {
     const handleModify = async (e) =>{
         e.preventDefault();
         try {
-            const response = await axios.put('/api/user/postUpdate/' + id, {
+            const response = await axios.put('https://journey-diary-api.onrender.com/api/user/postUpdate/' + id, {
                 title: title,
                 content: content
             }, 

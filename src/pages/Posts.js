@@ -16,7 +16,7 @@ const Posts = () => {
 
     // Khai bao get Blogs
     const getPost = async () =>{
-        await axios.get('/api/post/')
+        await axios.get('https://journey-diary-api.onrender.com/api/post/')
             .then(response => {
                 setPost(response.data);
             })

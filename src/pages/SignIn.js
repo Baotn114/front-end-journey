@@ -32,7 +32,7 @@ const SignIn = () => {
 
       //Gui data nguoi dang nhap vao server
       try {
-        const response = await axios.post('/api/user/signin', {
+        const response = await axios.post('https://journey-diary-api.onrender.com/api/user/signin', {
           email: email,
           password: password
         })

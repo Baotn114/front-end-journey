@@ -27,7 +27,7 @@ const SignUp = () => {
 
         //Gui data nguoi dung dang ki toi server
         try {
-            await axios.post('/api/user/signup', {
+            await axios.post('https://journey-diary-api.onrender.com/api/user/signup', {
                 name: name,
                 email: email,
                 password: password,

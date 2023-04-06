@@ -26,7 +26,7 @@ const PostDetails = () => {
     
     // Lay du lieu tu database thong qua id
     const getPostDetails = async (req, res) =>{
-        await axios.get('/api/post/details/' + id)
+        await axios.get('https://journey-diary-api.onrender.com/api/post/details/' + id)
             .then(response =>{
                 setDetails(response.data);
                 //console.log(response.data);

@@ -25,7 +25,7 @@ const CommentModify = () => {
         if(user){
             const userId = user._id;
                 const userComments = async ()=> {
-                    const response = await axios.get('/api/user/userComment/' + userId, {
+                    const response = await axios.get('https://journey-diary-api.onrender.com/api/user/userComment/' + userId, {
                         headers: {
                             'Content-type' : 'application/json',
                             'Authorization': `Bearer ${user.token}`              
@@ -42,7 +42,7 @@ const CommentModify = () => {
     //Xu li function delete
     const handleDelete = async (id) =>{
         console.log(id);
-        const response = await axios.delete('/api/user/commentDelete/' + id, {
+        const response = await axios.delete('https://journey-diary-api.onrender.com/api/user/commentDelete/' + id, {
             headers: {
                 'Content-type' : 'application/json',
                 'Authorization': `Bearer ${user.token}`              

@@ -22,7 +22,7 @@ const Comments = (data_id) => {
 
     //Su dung axios Get de lay tat ca comment
     const getComments = async () =>{
-      await axios.get('/api/user/comments/' + id)
+      await axios.get('https://journey-diary-api.onrender.com/api/user/comments/' + id)
         .then(response =>{
           //console.log(response.data)
           const data = response.data;

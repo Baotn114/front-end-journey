@@ -23,7 +23,7 @@ const PostModify = () => {
         if(user){
             const userId = user._id;
                 const userPosts = async ()=> {
-                    const response = await axios.get('/api/user/userPost/' + userId, {
+                    const response = await axios.get('https://journey-diary-api.onrender.com/api/user/userPost/' + userId, {
                         headers: {
                             'Content-type' : 'application/json',
                             'Authorization': `Bearer ${user.token}`              

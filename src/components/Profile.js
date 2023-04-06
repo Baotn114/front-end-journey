@@ -27,7 +27,7 @@ const Profile = () => {
     const [showComponent, setShowComponent] = useState(false);
 
     const getUserInfo = async () =>{
-        const response = await axios.get('/api/user/profile/' + id,{
+        const response = await axios.get('https://journey-diary-api.onrender.com/api/user/profile/' + id,{
             headers: {
                 'Content-type' : 'application/json',
                 'Authorization': `Bearer ${user.token}`  
@@ -63,7 +63,7 @@ const Profile = () => {
     //Nhan nut de apply hinh anh
     const handleClick = async () =>{
         try {
-            const response = await axios.put('/api/user/profile/' + id, {
+            const response = await axios.put('https://journey-diary-api.onrender.com/api/user/profile/' + id, {
                 image: image
             }, 
             {

@@ -31,7 +31,7 @@ const CommentModifyDisplay = (_id) => {
     const handleModify = async ()=>{
         console.log(id);
         try {
-            await axios.put('/api/user/commentUpdate/' + id, {
+            await axios.put('https://journey-diary-api.onrender.com/api/user/commentUpdate/' + id, {
                 modify : modify
             }, 
             {

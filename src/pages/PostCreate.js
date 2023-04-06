@@ -31,7 +31,7 @@ const PostCreate = () => {
         e.preventDefault();
         // Su dung POST de luu data vao database
         try {
-            const response = await axios.post('/api/post/', {
+            const response = await axios.post('https://journey-diary-api.onrender.com/api/post/', {
                 title: title,
                 userName: `${user.name}`,
                 content: content,
