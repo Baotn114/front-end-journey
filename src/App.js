@@ -22,8 +22,10 @@ function App() {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/details/:id" element={<PostDetails />} />
-          {user && <Route path="/user" element={<User />} />}
-          {user && <Route path="/creation" element={<PostCreate />} />}
+          <Route element={<AuthWrapper />}>
+            {user && <Route path="/user" element={<User />} />}
+            {user && <Route path="/creation" element={<PostCreate />} />}
+          </Route>
         </Routes>
         <Footer />
     </div>
