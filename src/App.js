@@ -10,6 +10,7 @@ import PostDetails from "./components/PostDetails";
 import User from "./pages/User";
 import PostCreate from "./pages/PostCreate";
 import { useAuthContext } from "./hooks/useAuthContext";
+import AuthWrapper from "./components/AuthWrapper";
 function App() {
   const {user} = useAuthContext();
 
