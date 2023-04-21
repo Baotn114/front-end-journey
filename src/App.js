@@ -11,6 +11,7 @@ import User from "./pages/User";
 import PostCreate from "./pages/PostCreate";
 import { useAuthContext } from "./hooks/useAuthContext";
 import AuthWrapper from "./components/AuthWrapper";
+import UnauthorizedVerifiedToken from "./components/UnauthorizedVerifiedToken";
 function App() {
   const {user} = useAuthContext();
 
@@ -27,6 +28,7 @@ function App() {
             {user && <Route path="/user" element={<User />} />}
             {user && <Route path="/creation" element={<PostCreate />} />}
           </Route>
+          <Route path="/401" element={<UnauthorizedVerifiedToken />} />
         </Routes>
         <Footer />
     </div>

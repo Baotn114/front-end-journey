@@ -17,6 +17,7 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [repassword, setRepassword] = useState('');
     const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(null);
 
     //khai bao navigate
     const navigate = useNavigate();
@@ -27,13 +28,17 @@ const SignUp = () => {
 
         //Gui data nguoi dung dang ki toi server
         try {
-            await axios.post('https://journey-diary-api.onrender.com/api/user/signup', {
+            const response = await axios.post('https://journey-diary-api.onrender.com/api/user/signup', {
                 name: name,
                 email: email,
                 password: password,
                 repassword: repassword
             })
-            navigate("/sign-in");
+            const data = response.data;
+            setSuccess(data.success)
+            setTimeout(()=> {
+                navigate("/signIn")
+            }, 2500)
         } catch (error) {
             //console.error(error.response.data);
             const data = error.response.data.error;
@@ -53,7 +58,8 @@ const SignUp = () => {
                     <h2 className="text-uppercase text-center mb-5">Create an account</h2>
 
                     {error && <div className="alert alert-danger" role="alert">{error}</div>}
-                
+                    {success && <div className="alert alert-success" role="alert">{success}</div>}
+                    
                     <MDBInput wrapperClass='mb-4' label='Your Name' size='lg' id='form1' type='text' value={name} onChange={(e) => setName(e.target.value)}/>
                     <MDBInput wrapperClass='mb-4' label='Your Email' size='lg' id='form2' type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form3' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
