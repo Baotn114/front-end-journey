@@ -37,7 +37,7 @@ const SignUp = () => {
             const data = response.data;
             setSuccess(data.success)
             setTimeout(()=> {
-                navigate("/signIn")
+                navigate("/sign-in")
             }, 2500)
         } catch (error) {
             //console.error(error.response.data);
@@ -59,7 +59,7 @@ const SignUp = () => {
 
                     {error && <div className="alert alert-danger" role="alert">{error}</div>}
                     {success && <div className="alert alert-success" role="alert">{success}</div>}
-                    
+
                     <MDBInput wrapperClass='mb-4' label='Your Name' size='lg' id='form1' type='text' value={name} onChange={(e) => setName(e.target.value)}/>
                     <MDBInput wrapperClass='mb-4' label='Your Email' size='lg' id='form2' type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form3' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
