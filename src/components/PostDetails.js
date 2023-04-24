@@ -46,7 +46,7 @@ const PostDetails = () => {
         <div className="container-page">
             {!details
 
-            ?   <>
+            ?   <div className='custom-post' style={{marginTop: '20%'}}>
                     <MDBSpinner grow className='mx-2' size="sm" color='info'>
                         <span className=''></span>
                     </MDBSpinner>
@@ -55,8 +55,11 @@ const PostDetails = () => {
                     </MDBSpinner>  
                     <MDBSpinner grow className='mx-2' size="sm" color='info'>
                         <span className=''></span>
-                    </MDBSpinner>    
-                </>
+                    </MDBSpinner>
+                    <MDBSpinner grow className='mx-2' size="sm" color='info'>
+                        <span className=''></span>
+                    </MDBSpinner>
+                </div>
             :   <div className="custom-post">
                     <MDBCard className='mb-3' style={{marginTop: '30px'}}>
                         <MDBCardBody>
