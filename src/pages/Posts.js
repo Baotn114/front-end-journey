@@ -35,7 +35,7 @@ const Posts = () => {
             <div className="custom-post">
                 <div className="row" style={{marginTop: '30px'}}>
                     {!post       
-                        ?   <div className='custom-post' style={{marginTop: '40%'}}>
+                        ?   <div className='custom-post' style={{marginTop: '60%'}}>
                                 <MDBSpinner grow className='mx-2' size="sm" color='info'>
                                     <span className=''></span>
                                 </MDBSpinner>
