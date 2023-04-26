@@ -35,9 +35,9 @@ const Posts = () => {
             <div className="custom-post">
                 <div className="row" style={{marginTop: '30px'}}>
                     {!post       
-                        ?   <div className='custom-post' style={{marginTop: '60%'}}>
+                        ?  ( <div className='custom-post' style={{marginTop: '60%'}}>
                                 <p>Please wait a minute to let the back-end api work probably</p>
-                            </div>          
+                            </div> )
                         : post.map((data)=>(
                             <div className="col-sm-3" style={{width: '300px', marginTop: '30px'}}>
                                 <Link to={`/details/${data._id}`} key={data._id}>
