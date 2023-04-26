@@ -14,7 +14,7 @@ const AuthWrapper = () => {
         logout();
         alert("Your session is expired, please login again");
         return (
-            <Navigate to="/signIn" replace />
+            <Navigate to="/sign-in" replace />
         )
     }else if (!tokenExpired){
         return (
