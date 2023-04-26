@@ -36,18 +36,7 @@ const Posts = () => {
                 <div className="row" style={{marginTop: '30px'}}>
                     {!post       
                         ?   <div className='custom-post' style={{marginTop: '60%'}}>
-                                <MDBSpinner grow className='mx-2' size="sm" color='info'>
-                                    <span className=''></span>
-                                </MDBSpinner>
-                                <MDBSpinner grow className='mx-2' size="sm" color='info'>
-                                    <span className=''></span>
-                                </MDBSpinner>  
-                                <MDBSpinner grow className='mx-2' size="sm" color='info'>
-                                    <span className=''></span>
-                                </MDBSpinner>
-                                <MDBSpinner grow className='mx-2' size="sm" color='info'>
-                                    <span className=''></span>
-                                </MDBSpinner>
+                                <p>Please wait a minute to let the back-end api work probably</p>
                             </div>          
                         : post.map((data)=>(
                             <div className="col-sm-3" style={{width: '300px', marginTop: '30px'}}>
