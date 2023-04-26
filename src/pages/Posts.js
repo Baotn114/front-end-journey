@@ -33,7 +33,7 @@ const Posts = () => {
     return ( 
         <div className="container-page" style={{backgroundImage: `url(https://wallpaperset.com/w/full/9/f/b/38639.jpg)`, backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}>
             <div className="custom-post">
-            {!post
+            {post
                     ?   <div className="row" style={{marginTop: '30px'}}>
                             <p>Please wait a minute to let the back-end api work probably</p>
                         </div>
